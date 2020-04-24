@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/ch13_1_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="write"
+        android:text="writeFile"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="read"
+        android:text="readFile"/>
+
+    <EditText
+        android:id="@+id/ch13_1_ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Host ip"/>
+
+    <EditText
+        android:id="@+id/ch13_1_port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Host port"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="saveSharePref"
+        android:text="saveSharePref"/>
+
+</LinearLayout>

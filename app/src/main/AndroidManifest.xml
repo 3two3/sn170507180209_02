@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="cn.edu.sdwu.android02.classroom.sn170507180209_02">
 
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +12,57 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".Ch10Activity1">
+            <intent-filter>
+                <action android:name="com.inspur.action2"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="inspur.com"
+                    android:scheme="abc"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Ch10Activity2">
+        </activity>
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.inspur.broadcast"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".Ch10Activity3">
+        </activity>
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <activity android:name=".Ch12Activity1">
+        </activity>
+
+        <service
+            android:name=".MyService2"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <service
+            android:name=".MediaService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <activity android:name=".Ch12Activity2">
+
+        </activity>
+        <activity android:name=".Ch13Activity1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -17,5 +70,6 @@
             </intent-filter>
         </activity>
     </application>
+
 
 </manifest>
