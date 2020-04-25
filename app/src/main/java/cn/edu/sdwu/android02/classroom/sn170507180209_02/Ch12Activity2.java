@@ -79,7 +79,9 @@ public class Ch12Activity2 extends AppCompatActivity {
                 bindService(intent, serviceConnection, BIND_AUTO_CREATE);
                 break;
             case R.id.ch12_2_unbind:
+			if (bound) {
                 unbindService(serviceConnection);
+				}
                 bound = false;
                 break;
             case R.id.ch12_2_bindstart:

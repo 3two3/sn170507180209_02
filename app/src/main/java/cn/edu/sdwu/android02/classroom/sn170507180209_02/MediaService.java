@@ -66,16 +66,17 @@ public class MediaService extends Service {
     //停止
     public void stop() {
         Log.i(MediaService.class.toString(), "stop");
-        if (mediaPlayer.isPlaying()) {
+        
             mediaPlayer.stop();
-        }
-        //为了下一次播放，需要调用prepare方法
+			//为了下一次播放，需要调用prepare方法
         try {
             mediaPlayer.prepare();
         } catch (IOException e) {
             Log.e(MediaService.class.toString(), e.toString());
             e.printStackTrace();
+        
         }
+        
     }
 
     @Override
