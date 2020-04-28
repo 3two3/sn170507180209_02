@@ -6,7 +6,7 @@
 
     <EditText
         android:id="@+id/ch13_1_et"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
@@ -38,5 +38,23 @@
         android:layout_height="wrap_content"
         android:onClick="saveSharePref"
         android:text="saveSharePref"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="writeSd"
+        android:text="writeSd"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="readSd"
+        android:text="readSd"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="readRaw"
+        android:text="readRaw"/>
 
 </LinearLayout>
