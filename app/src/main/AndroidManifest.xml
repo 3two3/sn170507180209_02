@@ -62,9 +62,11 @@
         </service>
 
         <activity android:name=".Ch12Activity2">
-
         </activity>
         <activity android:name=".Ch13Activity1">
+
+        </activity>
+        <activity android:name=".Ch14Activity1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -72,6 +74,5 @@
             </intent-filter>
         </activity>
     </application>
-
 
 </manifest>
