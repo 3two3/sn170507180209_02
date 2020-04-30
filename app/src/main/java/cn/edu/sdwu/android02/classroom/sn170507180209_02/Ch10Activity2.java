@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -56,6 +57,7 @@ public class Ch10Activity2 extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 //得到联系人的信息(联系人的编号,lookup uri)
                 String content = data.getDataString();
+                Log.i(Ch10Activity2.class.toString(), data.getData().toString());
                 Toast.makeText(this, content, Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "cancel", Toast.LENGTH_SHORT).show();

@@ -64,9 +64,19 @@
         <activity android:name=".Ch12Activity2">
         </activity>
         <activity android:name=".Ch13Activity1">
-
         </activity>
         <activity android:name=".Ch14Activity1">
+
+        </activity>
+
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="com.inspur.android02"
+            android:enabled="true"
+            android:exported="true">
+        </provider>
+
+        <activity android:name=".Ch15Activity1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
