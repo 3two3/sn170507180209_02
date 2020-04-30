@@ -1,6 +1,8 @@
 package cn.edu.sdwu.android02.classroom.sn170507180209_02;
 
+import android.content.ContentResolver;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -58,6 +60,15 @@ public class Ch10Activity2 extends AppCompatActivity {
                 //得到联系人的信息(联系人的编号,lookup uri)
                 String content = data.getDataString();
                 Log.i(Ch10Activity2.class.toString(), data.getData().toString());
+
+                ContentResolver contentResolver = this.getContentResolver();
+                Cursor cursor = contentResolver.query(data.getData(), null, null, null, null);
+                while (cursor.moveToNext()) {
+                    String dispName = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+                    Toast.makeText(this, dispName, Toast.LENGTH_SHORT).show();
+                }
+                cursor.close();
+
                 Toast.makeText(this, content, Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "cancel", Toast.LENGTH_SHORT).show();
